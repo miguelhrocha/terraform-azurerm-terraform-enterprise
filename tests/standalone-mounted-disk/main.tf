@@ -9,7 +9,7 @@ resource "random_string" "friendly_name" {
 }
 
 module "secrets" {
-  source       = "./secrets"
+  source       = "../../fixtures/secrets"
   count        = local.utility_module_test || !var.is_replicated_deployment ? 0 : 1
   key_vault_id = var.key_vault_id
 
