@@ -42,7 +42,7 @@ module "standalone_mounted_disk" {
   distribution                  = var.distribution
   production_type               = "disk"
   disk_path                     = "/opt/hashicorp/data"
-  vm_node_count                 = 1
+  vm_node_count                 = var.instance_node_count
   vm_sku                        = "Standard_D4_v3"
   vm_image_id                   = local.vm_image_id
   vm_image_publisher            = local.vm_image_publisher

@@ -1,6 +1,10 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
+variable "instance_node_count" {
+  type = number
+  description = "amount of nodes to deploy"
+}
 
 variable "bypass_preflight_checks" {
   default     = true
